@@ -5,5 +5,5 @@ import com.example.tmdbclient.domain.repository.TvShowsRepository
 
 class GetTvShowUsecase(private val tvShowsRepository: TvShowsRepository) {
 
-    suspend fun getMovies():List<TvShow>? = tvShowsRepository.getTvShows()
+    suspend fun execute():List<TvShow>? = tvShowsRepository.getTvShows()
 }
