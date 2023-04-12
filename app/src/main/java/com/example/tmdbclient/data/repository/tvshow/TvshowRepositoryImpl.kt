@@ -28,17 +28,17 @@ class TvshowRepositoryImpl(
     }
 
     suspend fun getTvShowsFromAPI():List<TvShow>{
-        lateinit var movieList:List<TvShow>
+        lateinit var tvShowList:List<TvShow>
         try {
             val response : Response<TvShowList> = tvShowRemoteDataSource.getTvshow()
             val body : TvShowList? = response.body()
             if (body!=null){
-                movieList = body.tvShows
+                tvShowList = body.tvShows
             }
         }catch (exception:Exception){
             Log.i("MyTag",exception.message.toString())
         }
-        return movieList
+        return tvShowList
     }
 
     suspend fun getTvShowsFromDB():List<TvShow>{
