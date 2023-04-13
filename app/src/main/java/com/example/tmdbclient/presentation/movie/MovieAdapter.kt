@@ -50,5 +50,4 @@ class MyViewHolder(val binding: ListItemBinding) :
                 .load(posterURL)
                 .into(binding.imageView)
         }
-
 }
